@@ -9,8 +9,13 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--HotNotDog!-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HotNotDog" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,20 +23,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TMx-Ra-Tf8">
-                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hot-dog-day2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="TMx-Ra-Tf8">
+                                <rect key="frame" x="0.0" y="118" width="375" height="660"/>
                             </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="results will be displayed here..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bJt-mg-trO">
+                                <rect key="frame" x="0.0" y="88" width="375" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="D5Z-ZJ-RUN"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TMx-Ra-Tf8" secondAttribute="bottom" id="8yP-eQ-XQJ"/>
-                            <constraint firstItem="TMx-Ra-Tf8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="A0s-EC-bOs"/>
+                            <constraint firstItem="TMx-Ra-Tf8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="A0s-EC-bOs"/>
+                            <constraint firstItem="bJt-mg-trO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Qla-xI-zXe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bJt-mg-trO" secondAttribute="trailing" id="VZb-vA-wNg"/>
+                            <constraint firstItem="bJt-mg-trO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YsP-ty-A3n"/>
+                            <constraint firstItem="TMx-Ra-Tf8" firstAttribute="top" secondItem="bJt-mg-trO" secondAttribute="bottom" id="mk6-Y6-Yfr"/>
                             <constraint firstItem="TMx-Ra-Tf8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="oYG-2c-gWt"/>
                             <constraint firstItem="TMx-Ra-Tf8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zYZ-Ki-bIe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Ttj-vz-rLj">
+                    <navigationItem key="navigationItem" title="HotNotDog!" id="Ttj-vz-rLj">
                         <barButtonItem key="rightBarButtonItem" systemItem="camera" id="Dun-1J-fcz">
                             <connections>
                                 <action selector="cameraTapped:" destination="BYZ-38-t0r" id="aPk-3t-RS7"/>
@@ -40,6 +58,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="TMx-Ra-Tf8" id="Eg1-rr-YTh"/>
+                        <outlet property="textView" destination="bJt-mg-trO" id="Dih-7F-dgF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -65,4 +84,7 @@
             <point key="canvasLocation" x="-324" y="133"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hot-dog-day2.jpg" width="2000" height="1333"/>
+    </resources>
 </document>

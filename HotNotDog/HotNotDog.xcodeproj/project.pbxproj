@@ -13,6 +13,7 @@
 		287F8383201989D900839E1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 287F8382201989D900839E1C /* Assets.xcassets */; };
 		287F8386201989D900839E1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 287F8384201989D900839E1C /* LaunchScreen.storyboard */; };
 		287F838E20198A3E00839E1C /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 287F838D20198A3D00839E1C /* Inceptionv3.mlmodel */; };
+		28AB5266201FDD6F008EBE06 /* hot-dog-day2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28AB5265201FDD6E008EBE06 /* hot-dog-day2.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		287F8385201989D900839E1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		287F8387201989D900839E1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		287F838D20198A3D00839E1C /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
+		28AB5265201FDD6E008EBE06 /* hot-dog-day2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hot-dog-day2.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				287F838D20198A3D00839E1C /* Inceptionv3.mlmodel */,
+				28AB5265201FDD6E008EBE06 /* hot-dog-day2.jpg */,
 				287F837B201989D900839E1C /* AppDelegate.swift */,
 				287F837D201989D900839E1C /* ViewController.swift */,
 				287F837F201989D900839E1C /* Main.storyboard */,
@@ -128,6 +131,7 @@
 			files = (
 				287F8386201989D900839E1C /* LaunchScreen.storyboard in Resources */,
 				287F8383201989D900839E1C /* Assets.xcassets in Resources */,
+				28AB5266201FDD6F008EBE06 /* hot-dog-day2.jpg in Resources */,
 				287F8381201989D900839E1C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

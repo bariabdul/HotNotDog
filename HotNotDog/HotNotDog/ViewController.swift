@@ -16,6 +16,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
        present(imagePicker, animated: true, completion: nil)
     }
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var textView: UITextField!
     
     let imagePicker = UIImagePickerController()
     
@@ -31,6 +32,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let userPickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
            imageView.image = userPickedImage
+            imageView.alpha = 0.85
            
             guard let ciimage = CIImage(image: userPickedImage) else {
                 fatalError("Could not convert image to CIImage")
@@ -54,9 +56,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             //print(results)
             if let first = results.first {
                 if first.identifier.contains("hotdog") {
-                    self.navigationItem.title = "Hot Dog!"
+                    self.textView.text = "This image is of a Hot Dog!"
+                    //self.navigationItem.title = "Hot Dog!"
                 } else {
-                    self.navigationItem.title = "Not Hod Dog!"
+                    self.textView.text = "Oops. This is not a Hot Dog"
+                    //self.navigationItem.title = "Not Hot Dog!"
                 }
             }
         }
